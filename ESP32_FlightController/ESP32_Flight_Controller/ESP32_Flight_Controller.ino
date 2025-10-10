@@ -247,7 +247,7 @@ void onWebSocketEvent(uint8_t num, WStype_t type, uint8_t * payload, size_t leng
 
 // === שידור ל-RPI בתדירות מקסימלית של פעם ב-10ms (100Hz) ===
 uint32_t nowUs = micros();
-if ((uint32_t)(nowUs - lastBroadcastUs) >= 00000) {  // בטוח גם עם overflow
+if ((uint32_t)(nowUs - lastBroadcastUs) >= 10000) {  // בטוח גם עם overflow
   int thr = (int)InputThrottle;
   int rx0 = ReceiverValueSOCKET[0];
   int rx1 = ReceiverValueSOCKET[1];
@@ -255,7 +255,7 @@ if ((uint32_t)(nowUs - lastBroadcastUs) >= 00000) {  // בטוח גם עם overf
   int bat = monitor_BATT();
   String msgRPI5 = String(thr) + "," + String(rx0) + "," + String(rx1) + "," + String(tC, 2) + "," + String(bat);
   webSocket.broadcastTXT(msgRPI5);
-  Serial.print("battary: ");Serial.println(bat);
+  //Serial.print("battary: ");Serial.println(bat);
   lastBroadcastUs = nowUs;
 }
 
@@ -270,6 +270,7 @@ if ((uint32_t)(nowUs - lastBroadcastUs) >= 00000) {  // בטוח גם עם overf
 void wsTask(void* pv) {
   for(;;) {
     webSocket.loop();
+    monitor_BATT();
     vTaskDelay(pdMS_TO_TICKS(1)); // רספונסיביות טובה בלי לחנוק CPU
   }
 }
@@ -286,6 +287,7 @@ void controlTask(void* pv) {
     RateRoll-=RateCalibrationRoll;
     RatePitch-=RateCalibrationPitch;
     RateYaw-=RateCalibrationYaw;
+
     kalman_1d(KalmanAngleRoll, KalmanUncertaintyAngleRoll, RateRoll, AngleRoll);
     KalmanAngleRoll=Kalman1DOutput[0]; KalmanUncertaintyAngleRoll=Kalman1DOutput[1];
     kalman_1d(KalmanAnglePitch, KalmanUncertaintyAnglePitch, RatePitch, AnglePitch);
@@ -438,13 +440,13 @@ void setup() {
   digitalWrite(2, LOW);
 
   WiFi.begin(ssid, password);
-  Serial.print("מתחבר לרשת WiFi");                //serial print test for connection
+  //Serial.print("מתחבר לרשת WiFi");                //serial print test for connection
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
   }
-  Serial.println("\nWiFi מחובר");                // בדיקת עבור התחברות וויפיי - הדפסה סיריאלית  
-  Serial.print("כתובת IP: ");
-  Serial.println(WiFi.localIP());                // IP OF THE ESP BOARD
+  //Serial.println("\nWiFi מחובר");                // בדיקת עבור התחברות וויפיי - הדפסה סיריאלית  
+  //Serial.print("כתובת IP: ");
+  //Serial.println(WiFi.localIP());                // IP OF THE ESP BOARD
 
   webSocket.begin();
   webSocket.onEvent(onWebSocketEvent);
