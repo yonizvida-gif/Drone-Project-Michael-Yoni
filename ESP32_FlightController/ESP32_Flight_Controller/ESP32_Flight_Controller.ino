@@ -247,7 +247,7 @@ void onWebSocketEvent(uint8_t num, WStype_t type, uint8_t * payload, size_t leng
 
 // === שידור ל-RPI בתדירות מקסימלית של פעם ב-10ms (100Hz) ===
 uint32_t nowUs = micros();
-if ((uint32_t)(nowUs - lastBroadcastUs) >= 10000) {  // בטוח גם עם overflow
+if ((uint32_t)(nowUs - lastBroadcastUs) >= 7000) {  // בטוח גם עם overflow
   int thr = (int)InputThrottle;
   int rx0 = ReceiverValueSOCKET[0];
   int rx1 = ReceiverValueSOCKET[1];
