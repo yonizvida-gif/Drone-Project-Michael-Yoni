@@ -16,7 +16,7 @@ hardware firmware solution, developed and tested on a real platform.
 - Real-time PID flight control
 - Sensor fusion using IMU data
 - Wireless control and telemetry over Wi-Fi
-- Full hardware–firmware integration
+- Full hardware firmware integration
 
 ## Repository Structure
 - ESP32_FlightController        – ESP32-S3 flight controller firmware (C++)
