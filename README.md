@@ -19,10 +19,10 @@ hardware–firmware solution, developed and tested on a real platform.
 - Full hardware–firmware integration
 
 ## Repository Structure
-- esp32              – ESP32 flight controller firmware (C++)
-- project_book       – Project documentation and report
-- raspberry_pi_app   – Raspberry Pi 5 control application
-- mit_app_inventor   – Mobile remote control application (MIT App Inventor source)
+- ESP32_FlightController        – ESP32-S3 flight controller firmware (C++)
+- Final_Project_Report_Book     – Project documentation and report
+- RaspberryPi_App               – Raspberry Pi 5 control application
+- Remote_Controller             – Mobile remote control application (MIT App Inventor source)
  
 
 ## Tools & Technologies
