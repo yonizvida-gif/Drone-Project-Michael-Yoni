@@ -3,7 +3,7 @@
 ## Project Overview
 This project implements a real-time flight controller for a quadcopter based on the ESP32 microcontroller.
 The system integrates control algorithms, sensor fusion, and wireless communication into a complete
-hardware–firmware solution, developed and tested on a real platform.
+hardware firmware solution, developed and tested on a real platform.
 
 ## System Architecture
 - ESP32-S3 microcontroller
