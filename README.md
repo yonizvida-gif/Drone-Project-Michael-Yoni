@@ -1,9 +1,10 @@
-# Drone-Project
+# ESP32-S3 Quadcopter Flight Controller
+
 
 ## Project Overview
-This project implements a real-time flight controller for a quadcopter based on the ESP32 microcontroller.
+This project implements a real-time flight controller for a quadcopter based on the ESP32-S3 microcontroller.
 The system integrates control algorithms, sensor fusion, and wireless communication into a complete
-hardware firmware solution, developed and tested on a real platform.
+hardware-firmware solution, developed and tested on a real platform.
 
 ## System Architecture
 - ESP32-S3 microcontroller
@@ -16,7 +17,7 @@ hardware firmware solution, developed and tested on a real platform.
 - Real-time PID flight control
 - Sensor fusion using IMU data
 - Wireless control and telemetry over Wi-Fi
-- Full hardware firmware integration
+- Full hardware-firmware integration
 
 ## Repository Structure
 - ESP32_FlightController        – ESP32-S3 flight controller firmware (C++)
@@ -30,3 +31,8 @@ hardware firmware solution, developed and tested on a real platform.
 - Protocols: I2C, UART, PWM, WebSockets
 - Algorithms: Kalman Filter, PID Control, Sensor Fusion
 - Platforms: ESP32-S3, Raspberry Pi 5, MIT App Inventor
+
+
+
+
+
