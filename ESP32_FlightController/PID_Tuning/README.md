@@ -11,8 +11,8 @@ The following table summarizes the key configurations tested. Each link leads to
 | Test Phase | PID Constants (Kp, Ki, Kd) | Observations & Results | Video Link (Drive) |
 | :--- | :--- | :--- | :--- |
 | **Baseline Test** | Kp=0.5, Ki=0, Kd=0 | Low sensitivity. The drone reacts slowly to tilt and struggles to stay level. | [Watch Video](https://drive.google.com/file/d/1JpWigT42SQpWMOSCVMMJs7mCDHSGsrc3/view?usp=sharing) |
-| **Stability Iteration** | Kp=1.1, Ki=0.5, Kd=0 | Improved responsiveness, but suffers from "overshoot" and oscillations due to lack of damping. | [Watch Video](https://drive.google.com/drive/folders/1mEs3maFLdi-9PJG2mK-bnNHkeP8YyCYW?usp=sharing) |
-| **Final Calibration** | **Kp=1.1, Ki=0.45, Kd=0.003** | **Optimal balance. The D-term provides necessary damping, resulting in a stable and smooth hover.** | [Watch Video](https://drive.google.com/drive/folders/1mEs3maFLdi-9PJG2mK-bnNHkeP8YyCYW?usp=sharing) |
+| **Stability Iteration** | Kp=1.1, Ki=0.5, Kd=0 | Improved responsiveness, but suffers from "overshoot" and oscillations due to lack of damping. | [Watch Video](https://drive.google.com/file/d/1b-mF-MVW8dT9wH-66lKwN4yAy_oIFpzj/view?usp=sharing) |
+| **Final Calibration** | **Kp=1.1, Ki=0.45, Kd=0.003** | **Optimal balance. The D-term provides necessary damping, resulting in a stable and smooth hover.** | [Watch Video]([https://drive.google.com/drive/folders/1mEs3maFLdi-9PJG2mK-bnNHkeP8YyCYW?usp=sharing](https://drive.google.com/file/d/1wxWxqcvHOKDVnq-pwEMkkPILJPc9_PWu/view?usp=sharing)) |
 
 ## 🛠️ Parameter Functions
 * **Kp (Proportional):** Controls the strength of the reaction to the current error. High Kp increases speed but causes oscillations.
