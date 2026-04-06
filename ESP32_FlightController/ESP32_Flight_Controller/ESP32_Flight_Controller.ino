@@ -270,7 +270,6 @@ if ((uint32_t)(nowUs - lastBroadcastUs) >= 7000) {  // בטוח גם עם overfl
 void wsTask(void* pv) {
   for(;;) {
     webSocket.loop();
-    monitor_BATT();
     vTaskDelay(pdMS_TO_TICKS(1)); // רספונסיביות טובה בלי לחנוק CPU
   }
 }
@@ -343,6 +342,7 @@ void controlTask(void* pv) {
 
     if(ErrorRateRoll < 0.5 && ErrorRateRoll > -0.5) ErrorRateRoll = 0;
     if(ErrorRatePitch < 0.5 && ErrorRatePitch > -0.5) ErrorRatePitch = 0;
+    //if(ErrorRateYaw < 0.5 && ErrorRateYaw > -0.5) ErrorRateYaw = 0;
 
     pid_equation(ErrorRateRoll,  PRateRoll,  IRateRoll,  DRateRoll,  PrevErrorRateRoll,  PrevItermRateRoll);
     InputRoll         = PIDReturn[0];
