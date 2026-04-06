@@ -1,7 +1,7 @@
 
 # ⚙️ Motor Calibration & PWM Setup (ESP32-S3)
 
-This module handles the initialization and calibration of the four Brushless DC (BLDC) motors via Electronic Speed Controllers (ESCs) using the ESP32 LED Control (LEDC) peripheral.
+This module handles the initialization and calibration of the four Brushless DC motors via Electronic Speed Controllers (ESCs) using the ESP32 LED Control (LEDC) peripheral.
 
 ## 🔌 Hardware Configuration
 * **Microcontroller:** ESP32-S3
