@@ -12,6 +12,13 @@ hardware-firmware solution, developed and tested on a real platform.
 - PID-based attitude control
 - Wi-Fi communication for control and telemetry
 - Motor drivers and ESCs
+  
+ ## 🖥️ System Interfaces
+
+| **Ground Station (RPi 5)** | **Mobile Controller** |
+| :---: | :---: |
+| ![Dashboard](RaspberryPi_App/dashboard.png) | ![Remote](Remote_Controller/remote_gui.png) |
+| Real-time 3D Telemetry | Low-latency Manual Flight Control |
 
 ## Key Features
 - Real-time PID flight control
