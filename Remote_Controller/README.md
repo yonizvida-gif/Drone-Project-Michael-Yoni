@@ -1,5 +1,5 @@
 
-# 📱 Remote Control Interface (GCS)
+# 📱 Remote Control Interface
 
 This interface provides full manual control over the drone via a web-based or mobile application. It communicates directly with the ESP32 flight controller to manage flight dynamics and system states.
 
