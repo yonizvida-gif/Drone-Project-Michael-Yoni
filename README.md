@@ -7,11 +7,11 @@ The system integrates control algorithms, sensor fusion, and wireless communicat
 hardware-firmware solution, developed and tested on a real platform.
 
 ## System Architecture
-- ESP32-S3 microcontroller
-- MPU6050 IMU (accelerometer and gyroscope)
-- PID-based attitude control
-- Wi-Fi communication for control and telemetry
-- Motor drivers and ESCs
+![System Architecture](system_architecture_drone.png)
+
+The flight controller leverages the **ESP32-S3 dual-core architecture** to separate critical tasks:
+- **Core A (webtask):** Telemetry & Commands Handling.
+- **Core B (controltask):** Flight Control & PID Loop.
   
  ## 🖥️ System Interfaces
 
